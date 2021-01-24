@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 定义一个类
+        class Perison{
+            constructor(name,age){
+                this.name=name
+                this.age=age
+            }
+            // 定义一个方法
+            speak(){
+                console.log(`${this.name}说他已经${this.age}了`)
+            }
+        }
+        // 继承
+        class Student extends Perison{
+            constructor(name,age,nianji){
+                super(name,age)
+                this.nianji=nianji
+            }
+            // 重写父类继承来的方法
+            speak(){
+                console.log(`${this.name}说他已经${this.age}了,在${this.nianji}`)
+            }
+            // 子类方法
+            say(){
+                console.log(`在${this.nianji}`)
+            }
+        }
+        
+        // let p1=new Perison('张三',19)
+        // console.log(p1.name);
+        // console.log(p1.speak());
+        let p2=new Student('李四',18,"初三")
+        // console.log(p2)
+        // console.log(p2.speak());
+        console.log(p2.say())
+    </script>
+</body>
+</html>
