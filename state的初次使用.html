@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Hello React!</title>
+<script src="https://cdn.staticfile.org/react/16.4.0/umd/react.development.js"></script>
+<script src="https://cdn.staticfile.org/react-dom/16.4.0/umd/react-dom.development.js"></script>
+<script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script>
+</head>
+<body>
+
+<div id="example"></div>
+<script type="text/babel">
+class Persion extends React.Component{
+    constructor(props){
+        super(props)
+        this.state = {isHote:false}
+    }
+    render(){
+        const {isHote}=this.state
+        return <h1>今天天气{isHote?"炎热":"寒冷"}</h1>
+    }
+}
+ReactDOM.render(<Persion/>,document.getElementById('example'))
+</script>
+
+</body>
+</html>
